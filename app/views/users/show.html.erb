@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @user.name %>'s Profile</h1>
+<p>Email: <%= @user.email %></p>
+
+<% if @first_micropost %>
+  <h3>First Micropost:</h3>
+  <p><%= @first_micropost.content %></p>
+<% else %>
+  <p>This user has no microposts yet.</p>
+<% end %>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
